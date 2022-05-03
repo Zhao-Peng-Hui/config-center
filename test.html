@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<a id="a" href="" style="font-size: 150px">下载</a>
+</body>
+<script>
+    window.onload = function () {
+        var a = document.getElementById('a');
+        a.href= decode("aXRtcy1zZXJ2aWNlczovLz9hY3Rpb249ZG93bmxvYWQtbWFuaWZlc3QmdXJsPWh0dHBzOi8vZ2l0ZWUuY29tL0RvbmdHZVplUmVuWW91WGlhbkdvbmdTaV9hZG1pbi9jbnBjL3Jhdy9tYXN0ZXIvdGVzdC5wbGlzdA==");
+       console.log(decode("aXRtcy1zZXJ2aWNlczovLz9hY3Rpb249ZG93bmxvYWQtbWFuaWZlc3QmdXJsPWh0dHBzOi8vZ2l0ZWUuY29tL0RvbmdHZVplUmVuWW91WGlhbkdvbmdTaV9hZG1pbi9jbnBjL3Jhdy9tYXN0ZXIvdGVzdC5wbGlzdA=="))
+    }
+    function decode(base64){
+// 对base64转编码
+        var decode = atob(base64);
+// 编码转字符串
+        var str = decodeURI(decode);
+        return str;
+    }
+    //字符串转base64
+    function encode(str){
+// 对字符串进行编码
+        var encode = encodeURI(str);
+// 对编码的字符串转化base64
+        var base64 = btoa(encode);
+        return base64;
+    }
+</script>
+</html>
